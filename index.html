@@ -2,93 +2,51 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Yoklama Sistemi</title>
   <style>
-    form { max-width: 600px; margin: 0 auto; }
-    label { display: block; margin: 10px 0 5px; }
-    .student { margin-bottom: 20px; }
-    .student-name { font-weight: bold; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    table, th, td {
+      border: 1px solid black;
+      padding: 10px;
+      text-align: center;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+    input, select, textarea {
+      margin-bottom: 10px;
+      width: 100%;
+      padding: 5px;
+    }
   </style>
 </head>
 <body>
 
   <h1>Yoklama Sistemi</h1>
+  
+  <!-- Öğretmen bilgilerini gireceği alanlar -->
   <form action="https://formspree.io/f/meojylgp" method="POST">
-    <!-- Öğrenci yoklama seçenekleri -->
-    <div class="student">
-      <p class="student-name">1. Ali Veli</p>
-      <label><input type="radio" name="student1" value="Var" required> Var</label>
-      <label><input type="radio" name="student1" value="Yok"> Yok</label>
-      <label><input type="radio" name="student1" value="Raporlu"> Raporlu</label>
-    </div>
+    <label for="teacherName">Dersin Hocası:</label>
+    <input type="text" id="teacherName" name="teacherName" placeholder="Hocanın Adı" required>
+    
+    <label for="courseLevel">Kur Seviyesi:</label>
+    <input type="text" id="courseLevel" name="courseLevel" placeholder="Örn: A2, B1" required>
+    
+    <label for="lessonDate">Dersin Günü:</label>
+    <input type="date" id="lessonDate" name="lessonDate" required>
 
-    <div class="student">
-      <p class="student-name">2. Ayşe Yılmaz</p>
-      <label><input type="radio" name="student2" value="Var" required> Var</label>
-      <label><input type="radio" name="student2" value="Yok"> Yok</label>
-      <label><input type="radio" name="student2" value="Raporlu"> Raporlu</label>
-    </div>
-
-    <div class="student">
-      <p class="student-name">3. Mehmet Can</p>
-      <label><input type="radio" name="student3" value="Var" required> Var</label>
-      <label><input type="radio" name="student3" value="Yok"> Yok</label>
-      <label><input type="radio" name="student3" value="Raporlu"> Raporlu</label>
-    </div>
-
-    <div class="student">
-      <p class="student-name">4. Selin Öz</p>
-      <label><input type="radio" name="student4" value="Var" required> Var</label>
-      <label><input type="radio" name="student4" value="Yok"> Yok</label>
-      <label><input type="radio" name="student4" value="Raporlu"> Raporlu</label>
-    </div>
-
-    <div class="student">
-      <p class="student-name">5. Kerem Kaya</p>
-      <label><input type="radio" name="student5" value="Var" required> Var</label>
-      <label><input type="radio" name="student5" value="Yok"> Yok</label>
-      <label><input type="radio" name="student5" value="Raporlu"> Raporlu</label>
-    </div>
-
-    <div class="student">
-      <p class="student-name">6. Buse Çelik</p>
-      <label><input type="radio" name="student6" value="Var" required> Var</label>
-      <label><input type="radio" name="student6" value="Yok"> Yok</label>
-      <label><input type="radio" name="student6" value="Raporlu"> Raporlu</label>
-    </div>
-
-    <div class="student">
-      <p class="student-name">7. Murat Demir</p>
-      <label><input type="radio" name="student7" value="Var" required> Var</label>
-      <label><input type="radio" name="student7" value="Yok"> Yok</label>
-      <label><input type="radio" name="student7" value="Raporlu"> Raporlu</label>
-    </div>
-
-    <div class="student">
-      <p class="student-name">8. Elif Akın</p>
-      <label><input type="radio" name="student8" value="Var" required> Var</label>
-      <label><input type="radio" name="student8" value="Yok"> Yok</label>
-      <label><input type="radio" name="student8" value="Raporlu"> Raporlu</label>
-    </div>
-
-    <div class="student">
-      <p class="student-name">9. Cem Arslan</p>
-      <label><input type="radio" name="student9" value="Var" required> Var</label>
-      <label><input type="radio" name="student9" value="Yok"> Yok</label>
-      <label><input type="radio" name="student9" value="Raporlu"> Raporlu</label>
-    </div>
-
-    <div class="student">
-      <p class="student-name">10. İrem Şahin</p>
-      <label><input type="radio" name="student10" value="Var" required> Var</label>
-      <label><input type="radio" name="student10" value="Yok"> Yok</label>
-      <label><input type="radio" name="student10" value="Raporlu"> Raporlu</label>
-    </div>
-
-    <!-- Formu gönderme butonu -->
-    <button type="submit">Yoklamayı Gönder</button>
-  </form>
-
-</body>
-</html>
+    <!-- Yoklama tablosu -->
+    <table>
+      <thead>
+        <tr>
+          <th>Öğrenci Adı</th>
+          <th>Durum</th>
+        </
