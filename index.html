@@ -9,7 +9,7 @@
       width: 100%;
       border-collapse: collapse;
     }
-    table, th, td {
+    th, td {
       border: 1px solid black;
       padding: 10px;
       text-align: center;
@@ -17,14 +17,12 @@
     th {
       background-color: #f2f2f2;
     }
-    label {
-      display: block;
-      margin-top: 10px;
+    input[type="radio"] {
+      margin: 0 10px;
     }
-    input, select, textarea {
-      margin-bottom: 10px;
-      width: 100%;
-      padding: 5px;
+    .header-row {
+      background-color: #f2f2f2;
+      font-weight: bold;
     }
   </style>
 </head>
@@ -32,7 +30,6 @@
 
   <h1>Yoklama Sistemi</h1>
   
-  <!-- Öğretmen bilgilerini gireceği alanlar -->
   <form action="https://formspree.io/f/meojylgp" method="POST">
     <label for="teacherName">Dersin Hocası:</label>
     <input type="text" id="teacherName" name="teacherName" placeholder="Hocanın Adı" required>
@@ -46,7 +43,80 @@
     <!-- Yoklama tablosu -->
     <table>
       <thead>
-        <tr>
+        <tr class="header-row">
           <th>Öğrenci Adı</th>
-          <th>Durum</th>
-        </
+          <th>Var</th>
+          <th>Yok</th>
+          <th>Raporlu</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Ali Veli</td>
+          <td><input type="radio" name="student1" value="Var" required></td>
+          <td><input type="radio" name="student1" value="Yok"></td>
+          <td><input type="radio" name="student1" value="Raporlu"></td>
+        </tr>
+        <tr>
+          <td>Ayşe Yılmaz</td>
+          <td><input type="radio" name="student2" value="Var" required></td>
+          <td><input type="radio" name="student2" value="Yok"></td>
+          <td><input type="radio" name="student2" value="Raporlu"></td>
+        </tr>
+        <tr>
+          <td>Mehmet Can</td>
+          <td><input type="radio" name="student3" value="Var" required></td>
+          <td><input type="radio" name="student3" value="Yok"></td>
+          <td><input type="radio" name="student3" value="Raporlu"></td>
+        </tr>
+        <tr>
+          <td>Selin Öz</td>
+          <td><input type="radio" name="student4" value="Var" required></td>
+          <td><input type="radio" name="student4" value="Yok"></td>
+          <td><input type="radio" name="student4" value="Raporlu"></td>
+        </tr>
+        <tr>
+          <td>Kerem Kaya</td>
+          <td><input type="radio" name="student5" value="Var" required></td>
+          <td><input type="radio" name="student5" value="Yok"></td>
+          <td><input type="radio" name="student5" value="Raporlu"></td>
+        </tr>
+        <tr>
+          <td>Buse Çelik</td>
+          <td><input type="radio" name="student6" value="Var" required></td>
+          <td><input type="radio" name="student6" value="Yok"></td>
+          <td><input type="radio" name="student6" value="Raporlu"></td>
+        </tr>
+        <tr>
+          <td>Murat Demir</td>
+          <td><input type="radio" name="student7" value="Var" required></td>
+          <td><input type="radio" name="student7" value="Yok"></td>
+          <td><input type="radio" name="student7" value="Raporlu"></td>
+        </tr>
+        <tr>
+          <td>Elif Akın</td>
+          <td><input type="radio" name="student8" value="Var" required></td>
+          <td><input type="radio" name="student8" value="Yok"></td>
+          <td><input type="radio" name="student8" value="Raporlu"></td>
+        </tr>
+        <tr>
+          <td>Cem Arslan</td>
+          <td><input type="radio" name="student9" value="Var" required></td>
+          <td><input type="radio" name="student9" value="Yok"></td>
+          <td><input type="radio" name="student9" value="Raporlu"></td>
+        </tr>
+        <tr>
+          <td>İrem Şahin</td>
+          <td><input type="radio" name="student10" value="Var" required></td>
+          <td><input type="radio" name="student10" value="Yok"></td>
+          <td><input type="radio" name="student10" value="Raporlu"></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <br>
+    <button type="submit">Yoklamayı Gönder</button>
+  </form>
+
+</body>
+</html>
